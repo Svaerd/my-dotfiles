@@ -9,6 +9,7 @@ if status is-interactive
     function welcome_message
         #figlet "Sup?" -f nvcript -tk | lolcat
         fastfetch
+        neo --charset=greek -s -D -c purple --colormode=32 -d 0.85 -m "I use Arch BTW"
     end
 
     function fish_greeting
@@ -16,7 +17,8 @@ if status is-interactive
     end
 
     function ff
-        fzf
+        fzf --style full \
+            --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'
     end
 
     function cl
