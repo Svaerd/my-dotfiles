@@ -6,6 +6,10 @@ zoxide init fish | source
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
+    #==================
+    # my function
+    #==================
+
     function welcome_message
         #figlet "Sup?" -f nvcript -tk | lolcat
         fastfetch
@@ -17,8 +21,12 @@ if status is-interactive
     end
 
     function ff
-        fzf --style full \
+        fzf -m --style full \
             --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'
+    end
+
+    function fd
+        fzf-cd-widget
     end
 
     function cl
@@ -29,6 +37,15 @@ if status is-interactive
         set -l result (command zoxide query --interactive -- $argv)
         and __zoxide_cd $result
     end
+
+    #=================
+    # my abbreviation
+    #=================
+
+    #abbreviation to start zellij with a certain session
+    abbr -a ze --set-cursor "zellij a % options --theme catppuccin-macchiato"
+    #abbreviation to start zellij with a new session
+    abbr -a zen --set-cursor "zellij -s % options --theme catppuccin-macchiato"
 end
 
 # Created by `pipx` on 2025-03-23 07:43:22
