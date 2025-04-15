@@ -46,6 +46,7 @@ if status is-interactive
     abbr -a ze --set-cursor "zellij a % options --theme catppuccin-macchiato"
     #abbreviation to start zellij with a new session
     abbr -a zen --set-cursor "zellij -s % options --theme catppuccin-macchiato"
+    abbr -a snv sudo -E -s nvim
 end
 
 # Created by `pipx` on 2025-03-23 07:43:22
