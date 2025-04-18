@@ -1,0 +1,333 @@
+* {
+	font-family: 'FiraCode Nerd Font Mono', sans-serif !important;
+}
+
+
+
+/*-----------------------------------------------------------------
+/* Find-in-page mod  by pathduck
+* https://pathduck.github.io/vivaldi/mods/CSS/find-in-page.css */
+/*-----------------------------------------------------------------
+
+.find-in-page-wrapper {
+	display: contents;
+}
+
+/* Find-in-page floating top */
+.find-in-page {
+	position:absolute;
+	background-color: var(--colorBg);
+	border-radius: var(--radius);
+	max-width: fit-content;
+	margin: 0 auto;
+	z-index:1;
+	top: 5px;
+  /* bottom: 5px; */
+	left: 0;
+	right: 0;
+}
+
+/* Find-in-page input wider */
+.find-in-page .fip-input-container {
+	width: 400px;
+	max-width: unset;
+}
+
+/* Find-in-page transparent if not focused */
+.find-in-page:not(:focus-within):not(:hover) {
+	opacity: 0.8;
+}
+
+/* Find-in-page background colour for no matches */
+.find-in-page.fip-nomatches { 
+	background: darkred;
+}
+
+/* Find-in-page result numbers clearer */
+.find-in-page .fip-results {
+	opacity: 1 !important;	
+}
+
+/* Find-in-page hit no animation */
+.fip-active-hit {
+	display: none;
+}
+
+/* Find-in-page hit no page dimming */
+#browser:has(.find-in-page) webview {
+filter: none !important;
+}
+/*.find-in-page-wrapper:has(.find-in-page) + .row-wrapper .webpage>webview { 
+	filter: unset !important;
+}*/
+
+
+/* ---------------------------------------------
+/* mods by luetage 
+* https://github.com/luetage/vivaldi_modding*/
+/* ---------------------------------------------
+
+/*
+Audio Tab Animation
+version 2021.9.0
+https://forum.vivaldi.net/topic/18439/audio-tab-animation
+Animates tabs playing sound.
+*/
+
+@keyframes greenwave {
+  from {
+    background: var(--colorAccentBgFaded);
+  }
+  to {
+    background: #bbffff;
+  }
+}
+@keyframes greenactive {
+  from {
+    background: var(--colorBg);
+  }
+  to {
+    background: #bbffff;
+  }
+}
+.tab.audio-on {
+  animation-name: greenwave;
+}
+.tab.active.audio-on {
+  animation-name: greenactive;
+}
+.tab.audio-on,
+.tab.active.audio-on {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+n animation-timing-function: ease-in;
+}
+
+
+/*
+Window buttons mod for linux
+https://forum.vivaldi.net/topic/33606/window-buttons-mod-for-linux
+Changes the shape of unhovered window buttons on linux. A version for Windows is available in the topic.
+*/
+
+#browser.linux .window-buttongroup button svg {
+    display: none;
+}
+#browser.linux #titlebar {
+    height: 100%;
+}
+#browser.linux .window-buttongroup {
+    -webkit-app-region: no-drag;
+    height: 100%;
+    margin: 0;
+    padding: 14px 8px 0;
+}
+#browser.linux #titlebar.tabless .window-buttongroup {
+    margin-top: 0px;
+    padding-top: 5px;
+}
+.stacks-off.fullscreen#browser.linux .window-buttongroup, .tabs-at-edge#browser.linux .window-buttongroup {
+    margin-top: 0px;
+    padding-top: 9px;
+}
+#browser.linux .window-buttongroup button {
+    margin-top: 3px;
+    height: 6px;
+    width: 14px;
+    opacity: 0.2;
+    background-color: var(--colorFg);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    transition-duration: 150ms;
+    transition-property: margin, height, border-radius;
+}
+
+:not(.fullscreen).hasfocus#browser.linux .window-buttongroup.graphite button.window-minimize, .hasfocus#browser.linux .window-buttongroup.graphite button.window-maximize, .hasfocus#browser.linux .window-buttongroup.graphite button.window-close {
+    opacity: 1;
+    background-color: #8e8e93;
+    border-color: #727277;
+}
+
+/* these code bellow for custom minimize button */
+:not(.fullscreen).hasfocus#browser.linux .window-buttongroup:not(.graphite) button.window-minimize {
+    opacity: 1;
+    background-color: #f7bb3f;
+    border-color: #dc9e34;
+}
+:not(.fullscreen).hasfocus#browser.linux .window-buttongroup:not(.graphite) button.window-minimize:hover {
+    margin-top: 0px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+/* and these for custom maximize button */
+.hasfocus#browser.linux .window-buttongroup:not(.graphite) button.window-maximize {
+    opacity: 1;
+    background-color: #34c749;
+    border-color: #1fa42d;
+}
+.hasfocus#browser.linux .window-buttongroup:not(.graphite) button.window-maximize:hover {
+    margin-top: 0px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+/* and these for custom close button */
+.hasfocus#browser.linux .window-buttongroup:not(.graphite) button.window-close {
+    opacity: 1;
+    background-color: #f8625e;
+    border-color: #de4947;
+}
+.hasfocus#browser.linux .window-buttongroup:not(.graphite) button.window-close:hover {
+    margin-top: 0px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+/* this for change the windows button shape all at once on hover. Uncomment the codes bellow if you want that*/
+/* #browser.linux .window-buttongroup:hover button { */
+/*     margin-top: 0px; */
+/*     height: 14px; */
+/*     border-radius: 50%; */
+/* } */
+
+
+
+/* =====================================
+   =====================================
+   MODS BY SJUDENIM: https://github.com/sjudenim/Mods-for-Vivaldi/blob/master/ui/addressbar-tweaks.CSS
+  =====================================
+  ===================================== */
+
+
+/* =====================================
+   Menu Button
+  ===================================== */
+.disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi { width: 44px !important; margin: 0 -2px 0 0 !important; border-radius: unset !important; }
+
+.vivaldi svg { flex: 0 0 26px !important; height: 26px !important; }
+
+.vivaldi:hover, .vivaldi:hover svg { background-color: var(--colorHighlightBg) !important; fill: var(--colorAccentFg) !important; }
+
+#browser .vivaldi span.burger-icon svg path { d: path("M3 6v1h18V6Zm0 6v1h18v-1zm0 6v1h18v-1z"); }
+
+#browser .vivaldi:hover span svg { transform: scale(1) !important; }
+
+.color-behind-tabs-on .vivaldi span.vivaldi-v, .color-behind-tabs-on .vivaldi span.burger-icon { opacity: initial !important; }
+
+
+/* =====================================
+   Addressfield
+  ===================================== */
+.UrlField { justify-content: center; }
+
+.UrlField .UrlBar-UrlField { text-align: center; }
+
+.toolbar-spacer-flexible ~ .UrlBar-AddressField, .toolbar-spacer-panel ~ .UrlBar-AddressField { flex-grow: 8; }
+
+.panel-bookmarks > header > div > input[type=search]:focus-within,
+.color-behind-tabs-off .SearchField:focus-within,
+.color-behind-tabs-off .MailSearchField-Inner:focus-within,
+.color-behind-tabs-off .UrlBar-AddressField:focus-within:focus-within {
+  outline: unset !important;
+}
+
+/* Chrome style */ 
+.UrlBar-AddressField, .SearchField {
+  border: 0 !important;
+  padding: 5px !important;
+  background-color: var(--colorFgAlpha);
+  border-radius: 25px !important;
+}
+/* End style */
+
+.addressfield form input.url { margin-top: 1px; padding-bottom: 3px !important; text-align: center; }
+
+.SearchField, .MailSearchField-Inner, .UrlBar-AddressField { color: var(--colorAccentFgFaded) !important; }
+
+/* Hides dropdown arrow for history in the address field */
+.button-toolbar>button[title="Show typed history"], .button-toolbar>button[title="Enter an address to activate typed history"] { display: none !important; }
+
+/* Pageload bar */
+.UrlBar-AddressField .pageload.progressing .pageload-indicator { display: none; }
+
+/* URL */
+.UrlFragment-Wrapper, .UrlFragment--Lowlight:first-of-type { color: var(--colorAccentFgFaded); }
+
+/* URL Base-domain  */
+.UrlFragment-HostFragment-Basedomain, .UrlFragment-HostFragment-TLD { color: var(--colorAccentFgFaded) !important; font-weight: 600; }
+
+/* URL Sub-domain */
+.UrlFragment-HostFragment-Subdomain { color: var(--colorHighlightBg) !important; font-weight: 600; }
+
+.UrlFragment-Wrapper:not(.UrlFragment-Wrapper--ShouldHighlight) { --HighlightColor: unset !important; --LowlightColor: unset !important; }
+
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput>.button-toolbar button:hover :not(:active):not(:focus):not(.button-pressed),
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput>.toolbar-group>.button-toolbar button:hover :not(:active):not(:focus):not(.button-pressed),
+.toolbar .button-toolbar.reload:hover {
+  background-color: transparent !important;
+  fill: var(--colorHighlightBg) !important;
+}
+
+.drop_down:hover, .drop_down[data-selected], #mail_panel section ul li.selected { background-color: var(--colorHighlightBg) !important; }
+
+button.button-addressfield:hover { background-color: transparent !important; border-color: transparent !important; }
+
+.addressfield button.button-addressfield.input-dropdown:hover svg,
+.button-addressfield.reader-mode:hover svg,
+.button-addressfield.bookmark:hover svg .bookmark-outline {
+  fill: var(--colorHighlightBgDark) !important;
+}
+
+.button-addressfield.bookmark.bookmarked svg .bookmark-outline { fill: var(--colorHighlightBgDark); }
+
+.button-addressfield.bookmark svg .bookmark-animated-fill { fill: var(--colorHighlightBgAlpha); }
+
+/* Content Blocking badge */
+.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.addressfield .ads,
+.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.addressfield .blocking,
+.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.addressfield .trackers {
+  fill: var(--colorHighlightBg) !important;
+}
+
+/* Site Info icon */
+.siteinfo-symbol:hover+.siteinfo-text { display: block; }
+
+.SiteInfoButton.secure, .SiteInfoButton.certified { fill: var(--colorHighlightBg); }
+
+.SiteInfoButton.warning { fill: var(--colorErrorBg); }
+
+.SiteInfoButton.secure:hover, .SiteInfoButton.certified:hover, .SiteInfoButton.warning { background-color: transparent; fill: var(--colorHighlightBg) !important; transform: scale(1.1); }
+
+.SiteInfoButton.secure svg path,
+.SiteInfoButton.certified svg path {}
+
+/* Internal site icon */
+.SiteInfoButton.internal svg path, .SiteInfoButton.warning svg path {
+  d: path("M10.4 5c-.4-.8 0-1.8 1-2 .7 0 1.5.4 1.6 1.2a1.4 1.4 0 0 1-.2 1l-4 7c-.3.5-.7.8-1.2.8-.6 0-1-.2-1.3-.7L3.8 7.8 2.2 5c-.5-.8 0-2 1-2 .7 0 1 .2 1.4.7l1 2 1 1.4a2 2 0 0 0 1.7 1.5 2.2 2.2 0 0 0 2.3-2V6c0-.3 0-.6-.2-1z");
+}
+
+/* Qr code icon */
+.create-qr-code button svg { fill: unset !important; }
+
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput>.button-toolbar>button.button-pressed { background-color: unset !important; }
+
+/* Add bookmark icon */
+.BookmarkButton { border: unset !important; }
+
+path.bookmark-outline, clipPath#addBookmarkPath path {
+  d: path("M14.051 3.176a4.026 4.026 0 0 0-5.687 0L8 3.54l-.363-.364a4.026 4.026 0 0 0-5.687 0C.414 4.711.405 7.146 1.927 8.838c1.389 1.543 5.485 4.878 5.659 5.019.118.097.26.143.401.143h.014a.605.605 0 0 0 .415-.143c.173-.141 4.27-3.476 5.658-5.019 1.522-1.692 1.511-4.127-.023-5.662zm-.924 4.81C12.044 9.19 9.068 11.671 8 12.552c-1.069-.881-4.044-3.362-5.127-4.565C1.811 6.807 1.8 5.125 2.85 4.076c.536-.535 1.24-.804 1.943-.804s1.407.268 1.943.804l.8.8a.612.612 0 0 0 .342.172.635.635 0 0 0 .585-.172l.801-.801a2.752 2.752 0 0 1 3.886 0c1.048 1.05 1.038 2.732-.023 3.911z");
+}
+
+.BookmarkButton-Button .ToolbarButton-Button { padding: 1px 3px 0 4px !important; }
+
+button.button-on path.bookmark-outline { fill: var(--colorHighlightBg) !important; }
+
+.add-bookmark-shadow, .bookmark-animated-fill { display: none; }
+
+#main>div.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.addressfield>div.toolbar.toolbar-small.toolbar-insideinput>div.button-toolbar.cjvgsbzxr000i3n670rebhqf3>button>svg>g>path.bookmark-animated-fill,
+#main>div.toolbar.toolbar-addressbar.toolbar-mainbar.toolbar-large>div.addressfield>div.toolbar.toolbar-small.toolbar-insideinput>div.button-toolbar.cjvgsbzxr000i3n670rebhqf3>button>svg>g>path.bookmark-outline {
+  display: none;
+}
+
