@@ -7,7 +7,7 @@
 #
 
 # sec=$(cat ~/.config/ml4w/settings/wallpaper-automation.sh)
-sec=600
+sec=6
 
 _setWallpaperRandomly() {
     waypaper --random

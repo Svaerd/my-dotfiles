@@ -1,4 +1,4 @@
 while true; do
-    sleep 60
+    sleep 600
     waypaper --random
 done
