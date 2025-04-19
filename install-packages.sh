@@ -1,26 +1,46 @@
 #!/bin/bash
 
 packages=(
-  ranger
-  bat
-  nvim
-  fish
-  git
-  lazygit
-  7zip
-  emojirunner
-  zoxide
-  fzf
-  fastfetch
-  gthumb
-  gimp
-  kitty
-  zellij
-  lua
-  gtrash
-  npm
+    bat
+    cmake
+    fastfetch
+    fish
+    gtrash-bin
+    git
+    ghostscript
+    grub-customizer
+    gthumb
+    hyprcursor
+    hyprgraphics
+    hypridle
+    hyprland
+    hyprland
+    hyprlock
+    hyprpaper
+    hyprshade
+    hyprutils
+    imagemagick
+    kitty
+    kdeconnect
+    lazygit
+    lua
+    neovim
+    npm
+    nwg-look
+    pacseek
+    rofi-calc
+    rofi-emoji
+    rofi-wayland
+    vivaldi
+    waypaper
+    wl-clipboard
+    xdg-desktop-portal-hyprland
+    zellij
+    zoxide
 )
 
 for package in "${packages[@]}"; do
-  yay -S --noconfirm "${package}"
+    yay -S --noconfirm "${package}"
 done
+
+xargs flatpak install -y <flatpaks.txt
