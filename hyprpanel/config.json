@@ -1,16 +1,8 @@
 {
   "bar.layouts": {
     "*": {
-      "left": [
-        "dashboard",
-        "ram",
-        "storage",
-        "netstat",
-        "windowtitle"
-      ],
-      "middle": [
-        "clock"
-      ],
+      "left": ["dashboard", "ram", "cpu", "netstat", "windowtitle"],
+      "middle": ["clock"],
       "right": [
         "cava",
         "volume",
@@ -27,7 +19,8 @@
   "bar.network.rightClick": "menu:bluetooth",
   "bar.battery.rightClick": "menu:powerdropdown",
   "bar.customModules.netstat.label": "false",
-  "bar.customModules.netstat.labelType": "compact",
+  "bar.customModules.netstat.labelType": "in",
+  "bar.clock.format": "%I:%M:%S %p",
   "theme.font.size": "1.1rem",
   "theme.font.name": "FiraCode Nerd Font Propo",
   "theme.font.label": "FiraCode Nerd Font Propo Medium",
@@ -429,5 +422,13 @@
   "bar.workspaces.monitorSpecific": false,
   "scalingPriority": "hyprland",
   "tear": true,
-  "bar.customModules.ram.leftClick": "btop"
+  "bar.customModules.ram.leftClick": "menu:dashboard",
+  "theme.bar.opacity": 90,
+  "theme.bar.transparent": true,
+  "bar.customModules.cava.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "bar.customModules.cava.showActiveOnly": true,
+  "bar.customModules.updates.pollingInterval": 21600000,
+  "bar.customModules.cpu.leftClick": "$TERMINAL -e btop --arch"
 }
+
