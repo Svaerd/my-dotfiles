@@ -47,7 +47,7 @@ keymap = [
 	{ on = [ "G" ],      run = "arrow bot",  desc = "Move cursor to the bottom" },
 
 	# Selection
-	{ on = [ "<Space>" ], run = [ "select --state=none", "arrow 1" ], desc = "Toggle the current selection state" },
+    { on = "<Space>",     run = [ "toggle", "arrow next" ], desc = "Toggle the current selection state" },
 	{ on = [ "v" ],       run = "visual_mode",                        desc = "Enter visual mode (selection mode)" },
 	{ on = [ "V" ],       run = "visual_mode --unset",                desc = "Enter visual mode (unset mode)" },
 	{ on = [ "<C-a>" ],   run = "select_all --state=true",            desc = "Select all files" },
@@ -138,6 +138,7 @@ keymap = [
 
 	# Goto
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
+    { on = [ "g", "m" ],       run = "cd ~/my-dotfiles/",    desc = "Go to the my-dotfiles dir" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go to the config directory" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go to the downloads directory" },
 	{ on = [ "g", "t" ],       run = "cd /tmp",          desc = "Go to the temporary directory" },

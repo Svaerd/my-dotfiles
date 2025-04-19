@@ -1,5 +1,9 @@
-[plugin]
-deps = [{ use = "Ape/mediainfo", rev = "c69314e" }]
+[[plugin.deps]]
+use = "Ape/mediainfo"
+rev = "c69314e"
+hash = ""
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-macchiato"
+rev = "68326b4"
+hash = "3ec21bcfd2735cfcbab61faaf43e59e4"
