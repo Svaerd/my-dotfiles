@@ -20,22 +20,36 @@ if status is-interactive
         welcome_message
     end
 
+    # just fzf, but with a great buff which make it looks nicer and easier to use
     function ff
         fzf -m --style full \
             --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'
     end
 
+    #this is more of an abbreviation, but whatever
     function fd
         fzf-cd-widget
     end
 
+    #clear the terminal and refresh the fish shell
     function cl
         clear && fish
     end
 
+    #zoxide, but interactive
     function zi
         set -l result (command zoxide query --interactive -- $argv)
         and __zoxide_cd $result
+    end
+
+    # yazi, but with the abbility to change dir upon quit
+    function y
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            builtin cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
     end
 
     #=================
