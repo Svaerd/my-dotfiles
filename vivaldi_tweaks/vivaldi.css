@@ -2,12 +2,37 @@
 	font-family: 'FiraCode Nerd Font Mono', sans-serif !important;
 }
 
+.quick-command-container {
+    border: 2px;
+}
 
+/*---------------------------------------
+* compact titlebar bar mod by luetage 
+* https://forum.vivaldi.net/post/789206
+* ---------------------------------------*/
+
+.alt.disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi {
+  top: unset;
+}
+#browser.linux.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+  min-height: calc(28px / var(--uiZoomLevel));
+}
+#browser.linux.address-top
+  .toolbar:has(.window-buttongroup.on-mainbar)
+  .vivaldi {
+  height: 24px;
+  width: 34px;
+  margin: 0;
+  padding: 0;
+}
+.density-on .UrlBar-AddressField {
+    height: 28px;
+}
 
 /*-----------------------------------------------------------------
 /* Find-in-page mod  by pathduck
 * https://pathduck.github.io/vivaldi/mods/CSS/find-in-page.css */
-/*-----------------------------------------------------------------
+/*-----------------------------------------------------------------*/
 
 .find-in-page-wrapper {
 	display: contents;
@@ -120,8 +145,8 @@ Changes the shape of unhovered window buttons on linux. A version for Windows is
 #browser.linux .window-buttongroup {
     -webkit-app-region: no-drag;
     height: 100%;
-    margin: 0;
-    padding: 14px 8px 0;
+    margin: 0px 0px 0px 10px;
+    padding: 5px 8px;
 }
 #browser.linux #titlebar.tabless .window-buttongroup {
     margin-top: 0px;
