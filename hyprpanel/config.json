@@ -1,8 +1,16 @@
 {
   "bar.layouts": {
     "*": {
-      "left": ["dashboard", "ram", "cpu", "netstat", "windowtitle"],
-      "middle": ["clock"],
+      "left": [
+        "dashboard",
+        "ram",
+        "cpu",
+        "netstat",
+        "windowtitle"
+      ],
+      "middle": [
+        "clock"
+      ],
       "right": [
         "cava",
         "volume",
@@ -21,10 +29,10 @@
   "bar.customModules.netstat.label": "false",
   "bar.customModules.netstat.labelType": "in",
   "bar.clock.format": "%I:%M:%S %p",
-  "theme.font.size": "1.1rem",
+  "theme.font.size": "1rem",
   "theme.font.name": "FiraCode Nerd Font Propo",
   "theme.font.label": "FiraCode Nerd Font Propo Medium",
-  "theme.bar.scaling": 85,
+  "theme.bar.scaling": 80,
   "theme.bar.menus.menu.dashboard.scaling": 90,
   "theme.bar.floating": true,
   "menus.clock.weather.unit": "metric",
@@ -38,7 +46,7 @@
   "menus.volume.raiseMaximumVolume": true,
   "menus.power.showLabel": true,
   "menus.power.lowBatteryNotification": true,
-  "bar.customModules.ram.labelType": "used/total",
+  "bar.customModules.ram.labelType": "percentage",
   "theme.bar.buttons.media.icon": "#b7bdf8",
   "theme.bar.buttons.media.text": "#b7bdf8",
   "theme.bar.buttons.icon": "#b7bdf8",
@@ -429,6 +437,19 @@
   "menus.dashboard.shortcuts.left.shortcut2.icon": "",
   "bar.customModules.cava.showActiveOnly": true,
   "bar.customModules.updates.pollingInterval": 21600000,
-  "bar.customModules.cpu.leftClick": "$TERMINAL -e btop --arch"
+  "bar.customModules.cpu.leftClick": "$TERMINAL -e btop --arch",
+  "menus.dashboard.powermenu.shutdown": "systemctl poweroff",
+  "bar.autoHide": "never",
+  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.border_radius": "0.7em",
+  "theme.bar.buttons.padding_x": "0.7rem",
+  "theme.bar.buttons.radius": "0.5em",
+  "theme.bar.margin_top": "0.2em",
+  "theme.bar.margin_sides": "0.2em",
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.show_icons": false,
+  "theme.bar.buttons.clock.spacing": "0.7em",
+  "terminal": "$TERM",
+  "notifications.timeout": 4000,
+  "theme.bar.margin_bottom": "-0.4em"
 }
-
