@@ -229,18 +229,18 @@ Changes the shape of unhovered window buttons on linux. A version for Windows is
 /* =====================================
    Menu Button
   ===================================== */
-.disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi { width: 44px !important; margin: 0 -2px 0 0 !important; border-radius: unset !important; }
-
-.vivaldi svg { flex: 0 0 26px !important; height: 26px !important; }
-
-.vivaldi:hover, .vivaldi:hover svg { background-color: var(--colorHighlightBg) !important; fill: var(--colorAccentFg) !important; }
-
-#browser .vivaldi span.burger-icon svg path { d: path("M3 6v1h18V6Zm0 6v1h18v-1zm0 6v1h18v-1z"); }
-
-#browser .vivaldi:hover span svg { transform: scale(1) !important; }
-
-.color-behind-tabs-on .vivaldi span.vivaldi-v, .color-behind-tabs-on .vivaldi span.burger-icon { opacity: initial !important; }
-
+/* .disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi { width: 44px !important; margin: 0 -2px 0 0 !important; border-radius: unset !important; } */
+/**/
+/* .vivaldi svg { flex: 0 0 26px !important; height: 26px !important; } */
+/**/
+/* .vivaldi:hover, .vivaldi:hover svg { background-color: var(--colorHighlightBg) !important; fill: var(--colorAccentFg) !important; } */
+/**/
+/* #browser .vivaldi span.burger-icon svg path { d: path("M3 6v1h18V6Zm0 6v1h18v-1zm0 6v1h18v-1z"); } */
+/**/
+/* #browser .vivaldi:hover span svg { transform: scale(1) !important; } */
+/**/
+/* .color-behind-tabs-on .vivaldi span.vivaldi-v, .color-behind-tabs-on .vivaldi span.burger-icon { opacity: initial !important; } */
+/**/
 
 /* =====================================
    Addressfield
