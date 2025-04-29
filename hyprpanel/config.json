@@ -1,25 +1,9 @@
 {
   "bar.layouts": {
     "*": {
-      "left": [
-        "dashboard",
-        "ram",
-        "cpu",
-        "netstat",
-        "windowtitle"
-      ],
-      "middle": [
-        "clock"
-      ],
-      "right": [
-        "cava",
-        "volume",
-        "network",
-        "systray",
-        "battery",
-        "notifications",
-        "workspaces"
-      ]
+      "left": ["dashboard", "ram", "cpu", "systray", "updates", "windowtitle"],
+      "middle": ["clock"],
+      "right": ["netstat", "cava", "notifications", "battery", "workspaces"]
     }
   },
   "theme.bar.location": "top",
@@ -34,7 +18,7 @@
   "theme.font.label": "FiraCode Nerd Font Propo Medium",
   "theme.bar.scaling": 80,
   "theme.bar.menus.menu.dashboard.scaling": 90,
-  "theme.bar.floating": true,
+  "theme.bar.floating": false,
   "menus.clock.weather.unit": "metric",
   "theme.bar.buttons.modules.ram.enableBorder": false,
   "theme.bar.buttons.systray.enableBorder": false,
@@ -435,9 +419,9 @@
   "theme.bar.transparent": true,
   "bar.customModules.cava.icon": "",
   "menus.dashboard.shortcuts.left.shortcut2.icon": "",
-  "bar.customModules.cava.showActiveOnly": true,
-  "bar.customModules.updates.pollingInterval": 21600000,
-  "bar.customModules.cpu.leftClick": "$TERMINAL -e btop --arch",
+  "bar.customModules.cava.showActiveOnly": false,
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "bar.customModules.cpu.leftClick": "kitty -e /home/archam/my-dotfiles/scripts/btop.sh",
   "menus.dashboard.powermenu.shutdown": "systemctl poweroff",
   "bar.autoHide": "never",
   "theme.bar.buttons.enableBorders": false,
@@ -451,5 +435,18 @@
   "theme.bar.buttons.clock.spacing": "0.7em",
   "terminal": "$TERM",
   "notifications.timeout": 4000,
-  "theme.bar.margin_bottom": "-0.4em"
+  "theme.bar.margin_bottom": "-0.4em",
+  "bar.customModules.cava.rightClick": "menu:audio",
+  "bar.customModules.cava.scrollDown": "hyprpanel vol -5",
+  "bar.customModules.cava.scrollUp": "hyprpanel vol +5",
+  "bar.workspaces.workspaces": 4,
+  "bar.customModules.cava.bars": 8,
+  "bar.customModules.netstat.leftClick": "menu:network",
+  "bar.customModules.netstat.rightClick": "menu:bluetooth",
+  "bar.customModules.netstat.middleClick": "",
+  "bar.customModules.updates.leftClick": "kitty -e /usr/share/hyprpanel/scripts/runUpdates.sh -arch",
+  "bar.customModules.cpuTemp.leftClick": "",
+  "bar.customModules.cava.channels": 2,
+  "bar.customModules.cava.showIcon": false
 }
+
