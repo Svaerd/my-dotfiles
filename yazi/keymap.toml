@@ -139,7 +139,7 @@ keymap = [
 	# Goto
 	{ on = [ "g", "h" ],       run = "cd ~",                    desc = "Go to the home directory" },
     { on = [ "g", "m" ],       run = "cd ~/my-dotfiles/",       desc = "Go to the my-dotfiles dir" },
-	{ on = [ "g", "h" ],       run = "cd /run/media/archam/",   desc = "Go to the external storage" },
+	{ on = [ "g", "e" ],       run = "cd /run/media/archam/",   desc = "Go to the external storage" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config",            desc = "Go to the config directory" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",          desc = "Go to the downloads directory" },
 	{ on = [ "g", "t" ],       run = "cd /tmp",                 desc = "Go to the temporary directory" },
