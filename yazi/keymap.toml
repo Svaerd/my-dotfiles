@@ -79,6 +79,11 @@ keymap = [
 	{ on = [ "z" ],         run = "jump zoxide",                                          desc = "Jump to a directory using zoxide" },
 	{ on = [ "Z" ],         run = "jump fzf",                                             desc = "Jump to a directory, or reveal a file using fzf" },
 
+[[manager.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Chmod on selected files"
+
 	# Linemode
 	{ on = [ "m", "s" ], run = "linemode size",        desc = "Set linemode to size" },
 	{ on = [ "m", "p" ], run = "linemode permissions", desc = "Set linemode to permissions" },
