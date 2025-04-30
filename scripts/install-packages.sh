@@ -1,10 +1,18 @@
 #!/bin/bash
 
 packages=(
+    ags-hyprpanel-git
     bat
+    bluez
+    bluez-utils
+    brightnessctl
+    btop
+    cliphist
     cmake
     fastfetch
+    fd
     fish
+    fzf
     gtrash-bin
     git
     ghostscript
@@ -16,11 +24,13 @@ packages=(
     hyprland
     hyprland
     hyprlock
+    hyprpolkitagent
     hyprpaper
     hyprshade
     hyprutils
     imagemagick
     kitty
+    keyd
     kdeconnect
     lazygit
     lua
@@ -28,6 +38,7 @@ packages=(
     npm
     nwg-look
     pacseek
+    ripgrep
     rofi-calc
     rofi-emoji
     rofi-wayland
