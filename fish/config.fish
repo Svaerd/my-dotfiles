@@ -1,5 +1,10 @@
 # oh-my-posh init fish --config ~/.oh-my-posh/powerlevel10k_rainbow.omp.json | source
 #set -x KITTY_CONFIG_DIRECTORY ~/.config/kitty/kitty/kitty.conf
+
+# to set fish as the default shell use:
+# chsh -s /usr/bin/fish
+# ------------------------------------
+
 fzf --fish | source
 zoxide init fish | source
 
@@ -50,6 +55,14 @@ if status is-interactive
             builtin cd -- "$cwd"
         end
         rm -f -- "$tmp"
+    end
+
+    function n
+        nvim
+    end
+
+    function lg
+        lazygit
     end
 
     #=================
