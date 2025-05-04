@@ -8,9 +8,8 @@ usage:
 
 Make sure to chown -R the cloned repo before modifying all the configs or even using it to avoid headache later.
 
-```sh
+```
  chown -R ~/my-dotfiles
-
 ```
 
 Afterwards, create sysmlink in the expected directory:
