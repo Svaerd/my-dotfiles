@@ -1,9 +1,24 @@
 {
   "bar.layouts": {
     "*": {
-      "left": ["dashboard", "ram", "cpu", "systray", "updates", "windowtitle"],
-      "middle": ["clock"],
-      "right": ["netstat", "cava", "notifications", "battery", "workspaces"]
+      "left": [
+        "dashboard",
+        "ram",
+        "cpu",
+        "systray",
+        "updates",
+        "windowtitle"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "netstat",
+        "cava",
+        "notifications",
+        "battery",
+        "workspaces"
+      ]
     }
   },
   "theme.bar.location": "top",
@@ -447,6 +462,7 @@
   "bar.customModules.updates.leftClick": "kitty -e /usr/share/hyprpanel/scripts/runUpdates.sh -arch",
   "bar.customModules.cpuTemp.leftClick": "",
   "bar.customModules.cava.channels": 2,
-  "bar.customModules.cava.showIcon": false
+  "bar.customModules.cava.showIcon": false,
+  "bar.customModules.updates.extendedTooltip": true,
+  "bar.customModules.updates.autoHide": true
 }
-
