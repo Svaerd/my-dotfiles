@@ -5,6 +5,7 @@ packages=(
     bat
     bluez
     bluez-utils
+    bibata-cursor-theme-bin
     brightnessctl
     btop
     cliphist
@@ -18,6 +19,7 @@ packages=(
     ghostscript
     grub-customizer
     gthumb
+    gtk-engine-murrine
     hyprcursor
     hyprgraphics
     hypridle
@@ -54,4 +56,4 @@ for package in "${packages[@]}"; do
     yay -S --noconfirm "${package}"
 done
 
-xargs flatpak install -y <flatpaks.txt
+# xargs flatpak install -y <flatpaks.txt
