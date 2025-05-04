@@ -8,7 +8,8 @@ usage:
 
 Make sure to chown -R the cloned repo before modifying all the configs or even using it to avoid headache later.
 
-```chown -R ~/my-dotfiles
+```sh
+ chown -R ~/my-dotfiles
 
 ```
 
