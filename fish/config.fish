@@ -57,10 +57,6 @@ if status is-interactive
         rm -f -- "$tmp"
     end
 
-    function n
-        nvim
-    end
-
     function lg
         lazygit
     end
@@ -74,6 +70,7 @@ if status is-interactive
     #abbreviation to start zellij with a new session
     abbr -a zen --set-cursor "zellij -s % options --theme catppuccin-macchiato"
     abbr -a s sudo -E -s
+    abbr -a n nvim
 end
 
 # Created by `pipx` on 2025-03-23 07:43:22
