@@ -6,4 +6,4 @@
 local opt = vim.opt
 opt.tabstop = 4
 opt.wrap = true -- Disable/enable line wrap
-opt.shiftwidth = 4 -- Size of an indent
+opt.shiftwidth = 2 -- Size of an indent
