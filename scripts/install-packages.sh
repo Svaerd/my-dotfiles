@@ -56,4 +56,8 @@ for package in "${packages[@]}"; do
     yay -S --noconfirm "${package}"
 done
 
-# xargs flatpak install -y <flatpaks.txt
+# to backup (aka. listing installed flatpak apps) use this command
+# flatpak list --columns=application --app > flatpaks.txt
+
+# and to install this, run:
+# xargs flatpak install -y < flatpaks.txt
