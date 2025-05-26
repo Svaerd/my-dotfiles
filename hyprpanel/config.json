@@ -464,5 +464,9 @@
   "bar.customModules.cava.channels": 2,
   "bar.customModules.cava.showIcon": false,
   "bar.customModules.updates.extendedTooltip": true,
-  "bar.customModules.updates.autoHide": true
+  "bar.customModules.updates.autoHide": false,
+  "bar.customModules.updates.padZero": true,
+  "bar.battery.scrollUp": "brightnessctl s 5%+",
+  "bar.battery.scrollDown": "brightnessctl s 5%-",
+  "bar.notifications.rightClick": "exec rofi -modi clipboard:~/.config/rofi/cliphist-rofi-img -show clipboard"
 }
