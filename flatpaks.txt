@@ -1,5 +1,4 @@
 app.zen_browser.zen
-com.github.tchx84.Flatseal
 com.github.wwmm.easyeffects
 com.mattjakeman.ExtensionManager
 com.shatteredpixel.shatteredpixeldungeon
@@ -7,6 +6,8 @@ de.haeckerfelix.Shortwave
 io.bassi.Amberol
 io.github.giantpinkrobots.flatsweep
 it.mijorus.gearlever
+net.nokyan.Resources
 org.gimp.GIMP
 org.libreoffice.LibreOffice
+org.onlyoffice.desktopeditors
 us.zoom.Zoom
