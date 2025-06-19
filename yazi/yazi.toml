@@ -1,6 +1,6 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[manager]
+[mgr]
 ratio          = [ 1, 3, 4 ]
 sort_by        = "natural"
 sort_sensitive = false
@@ -43,8 +43,8 @@ extract = [
 	{ run = 'unzip "%1"', desc = "Extract here", for = "windows" },
 ]
 play = [
-	{ run = 'vlc "$@"', orphan = true, for = "unix" },
-	{ run = 'vlc "%1"', orphan = true, for = "windows" },
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = 'mpv "%1"', orphan = true, for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 
@@ -70,7 +70,7 @@ rules = [
 	{ mime = "application/x-rar",           use = [ "extract", "reveal" ] },
 	{ mime = "application/xz",              use = [ "extract", "reveal" ] },
 
-	{ mime = "*", use = [ "open", "reveal" ] },
+	{ mime = "*", use = [ "edit", "reveal" ] },
 ]
 
 [tasks]
