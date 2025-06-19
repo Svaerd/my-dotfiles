@@ -6,6 +6,7 @@
         "ram",
         "cpu",
         "systray",
+        "hypridle",
         "updates",
         "windowtitle"
       ],
@@ -419,7 +420,7 @@
   "notifications.position": "top right",
   "menus.clock.time.military": true,
   "menus.clock.time.hideSeconds": false,
-  "menus.clock.weather.location": "Denpasar",
+  "menus.clock.weather.location": "Bali",
   "menus.dashboard.shortcuts.left.shortcut1.command": "flatpak run app.zen_browser.zen",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
   "menus.dashboard.shortcuts.enabled": true,
@@ -454,8 +455,8 @@
   "bar.customModules.cava.rightClick": "menu:audio",
   "bar.customModules.cava.scrollDown": "hyprpanel vol -5",
   "bar.customModules.cava.scrollUp": "hyprpanel vol +5",
-  "bar.workspaces.workspaces": 4,
-  "bar.customModules.cava.bars": 8,
+  "bar.workspaces.workspaces": 3,
+  "bar.customModules.cava.bars": 5,
   "bar.customModules.netstat.leftClick": "menu:network",
   "bar.customModules.netstat.rightClick": "menu:bluetooth",
   "bar.customModules.netstat.middleClick": "",
@@ -468,5 +469,9 @@
   "bar.customModules.updates.padZero": true,
   "bar.battery.scrollUp": "brightnessctl s 5%+",
   "bar.battery.scrollDown": "brightnessctl s 5%-",
-  "bar.notifications.rightClick": "exec rofi -modi clipboard:~/.config/rofi/cliphist-rofi-img -show clipboard"
+  "bar.notifications.rightClick": "exec rofi -modi clipboard:~/.config/rofi/cliphist-rofi-img -show clipboard",
+  "bar.customModules.netstat.rateUnit": "KiB",
+  "bar.customModules.hypridle.label": false,
+  "bar.launcher.autoDetectIcon": true,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": ""
 }
